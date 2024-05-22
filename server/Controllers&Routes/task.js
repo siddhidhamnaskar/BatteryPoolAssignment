@@ -60,7 +60,9 @@ router.post("/create" ,upload.single('file'),async(req,res)=>{
 
 router.get("/",async(req,res)=>{
     try{
-      const taskData=await Tasks.find().populate('Author',['Name']).sort({createdAt:-1}).limit(20);
+      console.log("function called")
+      const taskData=await Tasks.find();
+      // const taskData=await Tasks.find().populate('Author',['Name']).sort({createdAt:-1}).limit(20);
       res.status(200).json(taskData);
   
     }

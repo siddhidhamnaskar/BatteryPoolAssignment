@@ -36,59 +36,36 @@ export const BlogPostList = () => {
         minWidth: 50,
       },
       {
-        field: "title",
+        field: "Title",
         flex: 1,
         headerName: "Title",
         minWidth: 200,
       },
       {
-        field: "body",
+        field: "Desc",
         flex: 1,
-        headerName: "Content",
+        headerName: "Description",
         minWidth: 200,
       },
-      // {
-      //   field: "content",
-      //   flex: 1,
-      //   headerName: "content",
-      //   minWidth: 250,
-      //   renderCell: function render({ value }) {
-      //     if (!value) return "-";
-      //     return <MarkdownField value={value?.slice(0, 80) + "..." || ""} />;
-      //   },
-      // },
-      // {
-      //   field: "category",
-      //   flex: 1,
-      //   headerName: "Category",
-      //   minWidth: 300,
-      //   valueGetter: ({ row }) => {
-      //     const value = row?.category;
-      //     return value;
-      //   },
-      //   renderCell: function render({ value }) {
-      //     return categoryIsLoading ? (
-      //       <>Loading...</>
-      //     ) : (
-      //       categoryData?.data?.find((item) => item.id === value?.id)?.title
-      //     );
-      //   },
-      // },
-      // {
-      //   field: "status",
-      //   flex: 1,
-      //   headerName: "Status",
-      //   minWidth: 200,
-      // },
-      // {
-      //   field: "createdAt",
-      //   flex: 1,
-      //   headerName: "Created at",
-      //   minWidth: 250,
-      //   renderCell: function render({ value }) {
-      //     return <DateField value={value} />;
-      //   },
-      // },
+      {
+        field: "DueDate",
+        flex: 1,
+        headerName: "DueDate",
+        minWidth: 200,
+      },
+      {
+        field: "Status",
+        flex: 1,
+        headerName: "Status",
+        minWidth: 200,
+      },
+      {
+        field: "Image",
+        flex: 1,
+        headerName: "Image",
+        minWidth: 200,
+      },
+    
       {
         field: "actions",
         headerName: "Actions",

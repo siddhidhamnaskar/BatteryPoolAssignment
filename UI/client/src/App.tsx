@@ -117,14 +117,14 @@ function App() {
           <RefineSnackbarProvider>
             <DevtoolsProvider>
               <Refine
-                dataProvider={dataProvider("https://jsonplaceholder.typicode.com")}
+                dataProvider={dataProvider("http://localhost:8000")}
                 notificationProvider={notificationProvider}
                 routerProvider={routerBindings}
                 authProvider={authProvider}
                 resources={[
                   {
-                    name: "posts",
-                    list: "/posts",
+                    name: "tasks",
+                    list: "/tasks",
                     create: "/posts/create",
                     edit: "/posts/edit/:id",
                     show: "/posts/show/:id",
@@ -165,9 +165,9 @@ function App() {
                   >
                     <Route
                       index
-                      element={<NavigateToResource resource="posts" />}
+                      element={<NavigateToResource resource="tasks" />}
                     />
-                    <Route path="/posts">
+                    <Route path="/tasks">
                       <Route index element={<BlogPostList />} />
                       <Route path="create" element={<BlogPostCreate />} />
                       <Route path="edit/:id" element={<BlogPostEdit />} />
@@ -199,7 +199,7 @@ function App() {
                 <UnsavedChangesNotifier />
                 <DocumentTitleHandler />
               </Refine>
-              <DevtoolsPanel />
+              {/* <DevtoolsPanel /> */}
             </DevtoolsProvider>
           </RefineSnackbarProvider>
         </ColorModeContextProvider>

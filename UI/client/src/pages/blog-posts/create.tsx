@@ -24,7 +24,7 @@ export const BlogPostCreate = () => {
         autoComplete="off"
       >
         <TextField
-          {...register("title", {
+          {...register("Title", {
             required: "This field is required",
           })}
           error={!!(errors as any)?.title}
@@ -37,7 +37,7 @@ export const BlogPostCreate = () => {
           name="title"
         />
         <TextField
-          {...register("content", {
+          {...register("Desc", {
             required: "This field is required",
           })}
           error={!!(errors as any)?.content}
@@ -51,7 +51,7 @@ export const BlogPostCreate = () => {
         />
         <Controller
           control={control}
-          name={"category.id"}
+          name={"DueDate"}
           rules={{ required: "This field is required" }}
           // eslint-disable-next-line
           defaultValue={null as any}
